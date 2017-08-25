@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diary on inomar.me</title>
+    <link>https://inomar.github.io/diary/</link>
+    <description>Recent content in Diary on inomar.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 24 Aug 2017 17:21:51 +0900</lastBuildDate>
+    
+	<atom:link href="https://inomar.github.io/diary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugoを使ってgithub.ioページを書き換えた</title>
+      <link>https://inomar.github.io/diary/20170825/</link>
+      <pubDate>Thu, 24 Aug 2017 17:21:51 +0900</pubDate>
+      
+      <guid>https://inomar.github.io/diary/20170825/</guid>
+      <description>hugoを使ってgithub.ioページを書き換えた Railsの勉強も兼ねてblogを作ったものの、バグを修正したり、レイアウト変えてみたりと
+少し修正を加えるだけでも運用はめんどくさい
+ということで気軽にwebコンテンツが作成できるhugoを試してみた。
+hugoとは？  HUGOは、静的なhtmlを生成する事ができる静的ページジェネレータです。HUGOの場合、ローカル環境ではHUGOの動的機能を使って動的にサイトを開発し、成果物の出力時に動的要素を全て静的要素（html,css,js,img等）として出力します。 生成された成果物にはサーバサイドの処理を含まないため、サイトの表示速度は高速になり、サーバサイドの処理が無い分セキュリティリスクが減ります。 Let&amp;rsquo;s study HUGO!!
+ hugoを使えば簡単にwebコンテンツが作れて幸せになれるんだね。。。
+ということで今回はブログの代わりになるサイト?を作ってみようと思います！
+ゴール  hugoを使ってblogを作成 github.ioへホスティング この記事を投稿してみる  hugoをインストール 環境がmacなので導入にはhomebrewを使います。
+$ brew insatll hugo  サイトを作成 $ hugo new site site_name #適当なサイト名をつけます $ cd site_name # ディレクトリ構造 $ tree . ├── archetypes │ └── default.md ├── config.toml # 設定ファイル ├── content # ブログやらのコンテンツはこのディレクトリに入る ├── data　# ├── layouts # headerやfooterなどサイトのレイアウト ├── static　# cssや画像など └── themes # hugoで用意されたテーマ https://themes.</description>
+    </item>
+    
+  </channel>
+</rss>

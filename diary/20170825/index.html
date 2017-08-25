@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="inomar">
+<meta name="description" content="hugoを使ってgithub.ioページを書き換えた Railsの勉強も兼ねてblogを作ったものの、バグを修正したり、レイアウト変えてみたりと
+少し修正を加えるだけでも運用はめんどくさい
+ということで気軽にwebコンテンツが作成できるhugoを試してみた。
+hugoとは？  HUGOは、静的なhtmlを生成する事ができる静的ページジェネレータです。HUGOの場合、ローカル環境ではHUGOの動的機能を使って動的にサイトを開発し、成果物の出力時に動的要素を全て静的要素（html,css,js,img等）として出力します。 生成された成果物にはサーバサイドの処理を含まないため、サイトの表示速度は高速になり、サーバサイドの処理が無い分セキュリティリスクが減ります。 Let&rsquo;s study HUGO!!
+ hugoを使えば簡単にwebコンテンツが作れて幸せになれるんだね。。。
+ということで今回はブログの代わりになるサイト?を作ってみようと思います！
+ゴール  hugoを使ってblogを作成 github.ioへホスティング この記事を投稿してみる  hugoをインストール 環境がmacなので導入にはhomebrewを使います。
+$ brew insatll hugo  サイトを作成 $ hugo new site site_name #適当なサイト名をつけます $ cd site_name # ディレクトリ構造 $ tree . ├── archetypes │ └── default.md ├── config.toml # 設定ファイル ├── content # ブログやらのコンテンツはこのディレクトリに入る ├── data　# ├── layouts # headerやfooterなどサイトのレイアウト ├── static　# cssや画像など └── themes # hugoで用意されたテーマ https://themes.">
+
+<meta property="og:title" content="hugoを使ってgithub.ioページを書き換えた" />
+<meta property="og:description" content="hugoを使ってgithub.ioページを書き換えた Railsの勉強も兼ねてblogを作ったものの、バグを修正したり、レイアウト変えてみたりと
+少し修正を加えるだけでも運用はめんどくさい
+ということで気軽にwebコンテンツが作成できるhugoを試してみた。
+hugoとは？  HUGOは、静的なhtmlを生成する事ができる静的ページジェネレータです。HUGOの場合、ローカル環境ではHUGOの動的機能を使って動的にサイトを開発し、成果物の出力時に動的要素を全て静的要素（html,css,js,img等）として出力します。 生成された成果物にはサーバサイドの処理を含まないため、サイトの表示速度は高速になり、サーバサイドの処理が無い分セキュリティリスクが減ります。 Let&rsquo;s study HUGO!!
+ hugoを使えば簡単にwebコンテンツが作れて幸せになれるんだね。。。
+ということで今回はブログの代わりになるサイト?を作ってみようと思います！
+ゴール  hugoを使ってblogを作成 github.ioへホスティング この記事を投稿してみる  hugoをインストール 環境がmacなので導入にはhomebrewを使います。
+$ brew insatll hugo  サイトを作成 $ hugo new site site_name #適当なサイト名をつけます $ cd site_name # ディレクトリ構造 $ tree . ├── archetypes │ └── default.md ├── config.toml # 設定ファイル ├── content # ブログやらのコンテンツはこのディレクトリに入る ├── data　# ├── layouts # headerやfooterなどサイトのレイアウト ├── static　# cssや画像など └── themes # hugoで用意されたテーマ https://themes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://inomar.github.io/diary/20170825/" />
+
+
+
+<meta property="article:published_time" content="2017-08-24T17:21:51&#43;09:00"/>
+<meta property="article:modified_time" content="2017-08-24T17:21:51&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     hugoを使ってgithub.ioページを書き換えた 
+
+</title>
+<link rel="canonical" href="https://inomar.github.io/diary/20170825/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/obsidian.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://inomar.github.io/css/reset.css?t=2017-08-25%2010%3a49%3a44.084558842%20%2b0900%20JST">
+    <link rel="stylesheet" href="https://inomar.github.io/css/pygments.css?t=2017-08-25%2010%3a49%3a44.084558842%20%2b0900%20JST">
+    <link rel="stylesheet" href="https://inomar.github.io/css/main.css?t=2017-08-25%2010%3a49%3a44.084558842%20%2b0900%20JST">
+    
+        <link rel="stylesheet" href="https://inomar.github.io/css/override.css?t=2017-08-25%2010%3a49%3a44.084558842%20%2b0900%20JST">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://inomar.github.io/img/fav.png"
+
+>
+
+
+
+
+</head>
+
+
+<body lang="ja">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://inomar.github.io/"><img class="avatar" src="https://inomar.github.io/img/inomar.png" srcset="https://inomar.github.io/img/inomar.png 1x"></a>
+            
+            <a href="https://inomar.github.io/"><div class="name">inomar</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="http://blog.inomar.me"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://inomar.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-work"><a href="https://inomar.github.io/work/"><span>Work</span></a></li>
+                    
+                        <li class="nav-diary"><a href="https://inomar.github.io/diary/"><span>Diary</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/inomar" target="_blank" rel="noopener"><img class="icon" src="https://inomar.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/macoto_chan" target="_blank" rel="noopener"><img class="icon" src="https://inomar.github.io/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:inomar1486@gmail.com"><img class="icon" src="https://inomar.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://inomar.github.io/index.xml"><img class="icon" src="https://inomar.github.io/img/rss.svg" alt="rss" /></a>
+        
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    hugoを使ってgithub.ioページを書き換えた
+
+</div>
+
+                    <div class="initials"><a href="https://inomar.github.io"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='2017-08-24 17:21 JST'>2017-08-24</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h1 id="hugoを使ってgithub-ioページを書き換えた">hugoを使ってgithub.ioページを書き換えた</h1>
+
+<p>Railsの勉強も兼ねてblogを作ったものの、バグを修正したり、レイアウト変えてみたりと<br />
+少し修正を加えるだけでも運用はめんどくさい</p>
+
+<p>ということで気軽にwebコンテンツが作成できる<code>hugo</code>を試してみた。</p>
+
+<h2 id="hugoとは">hugoとは？</h2>
+
+<blockquote>
+<p>HUGOは、静的なhtmlを生成する事ができる静的ページジェネレータです。HUGOの場合、ローカル環境ではHUGOの動的機能を使って動的にサイトを開発し、成果物の出力時に動的要素を全て静的要素（html,css,js,img等）として出力します。 生成された成果物にはサーバサイドの処理を含まないため、サイトの表示速度は高速になり、サーバサイドの処理が無い分セキュリティリスクが減ります。
+<a href="http://www.study-hugo.com/basic/whats-hugo/">Let&rsquo;s study HUGO!!</a></p>
+</blockquote>
+
+<p>hugoを使えば簡単にwebコンテンツが作れて幸せになれるんだね。。。</p>
+
+<p>ということで今回はブログの代わりになるサイト?を作ってみようと思います！</p>
+
+<h2 id="ゴール">ゴール</h2>
+
+<ol>
+<li>hugoを使ってblogを作成</li>
+<li>github.ioへホスティング</li>
+<li>この記事を投稿してみる</li>
+</ol>
+
+<h2 id="hugoをインストール">hugoをインストール</h2>
+
+<p>環境がmacなので導入にはhomebrewを使います。</p>
+
+<pre><code>$ brew insatll hugo
+</code></pre>
+
+<h2 id="サイトを作成">サイトを作成</h2>
+
+<pre><code class="language-bash">$ hugo new site site_name #適当なサイト名をつけます
+
+$ cd site_name
+
+# ディレクトリ構造
+$ tree
+.
+├── archetypes
+│   └── default.md
+├── config.toml # 設定ファイル
+├── content     # ブログやらのコンテンツはこのディレクトリに入る
+├── data　　　　  #
+├── layouts     # headerやfooterなどサイトのレイアウト
+├── static　　　 # cssや画像など
+└── themes      # hugoで用意されたテーマ https://themes.gohugo.io/
+
+</code></pre>
+
+<h3 id="hugo">hugo</h3>
+
+<p>hugo コマンド</p>
+
+<pre><code class="language-bash">$ hugo # buildしてpublicディレクトリが生成され、index.htmlも作られます
+
+$ hugo server # ブラウザでhttp://localhost:1313でbuild内容を確認できます
+</code></pre>
+
+<p>今回はすでに用意してあるこちらのテーマを使って作っていきます。
+<a href="https://github.com/nishanths/cocoa-hugo-theme">cocoa-hugo-theme - github</a></p>
+
+<pre><code class="language-bash">$ git clone https://github.com/nishanths/cocoa-hugo-theme.git themes/cocoa
+</code></pre>
+
+<p>これでthemesディレクトリに<code>cocoa</code>のテーマがcloneされるので
+あとは<code>config.toml</code>を設定してやるだけです。
+cocoaの設定は以下を参考にしてください。
+<a href="https://github.com/nishanths/cocoa-hugo-theme/blob/master/exampleSite/config.toml">cocoa-hugo-theme/exampleSite/config.toml</a></p>
+
+<p>この時点で<code>localhost:1313</code>を叩けば設定した内容が確認できるかと思います。</p>
+
+<pre><code class="language-ruby">name = 'makoto'
+puts name
+</code></pre>
+
+                <br>
+		<p><a href="https://inomar.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/bash.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/ruby.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+</body>
+</html>
+
