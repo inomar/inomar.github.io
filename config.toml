@@ -1,0 +1,64 @@
+baseURL                 = "https://inomar.github.io"
+languageCode            = "ja"
+title                   = "inomar.me"
+theme                   = "cocoa"
+
+publishDir              = "docs"
+builddrafts             = false
+canonifyurls            = true
+contentdir              = "content"
+layoutdir               = "layouts"
+publishdir              = "public"
+author                  = "inomar"
+pygmentsuseclasses      = true
+pluralizelisttitles     = false
+
+[permalinks]
+blog                    = "blog/:slug/"
+about                   = "about"
+
+[[menu.main]]
+name                   = "Blog"
+weight                 = -120
+identifier             = "blog"
+url                    = "http://blog.inomar.me"
+
+[[menu.main]]
+name                   = "About"
+weight                 = -110
+identifier             = "about"
+url                    = "/about/"
+
+[[menu.main]]
+name                   = "Work"
+weight                 = -100
+identifier             = "work"
+url                    = "/work/"
+
+[[menu.main]]
+name                   = "Diary"
+weight                 = -80
+identifier             = "diary"
+url                    = "/diary/"
+
+[params]
+lang                   = "ja"
+avatar                 = "img/inomar.png"
+faviconfile            = "img/fav.png"
+latestpostscount       = 5                             # how many posts to display on the home page
+i18n_flags             = false                         # whether to display small country flags for available translations
+author                 = "inomar"
+cachebuster            = true                          # add the current unix timestamp in query string for cache busting css assets
+dateform               = "2006-01-02"
+dateformfull           = "2006-01-02 15:04 MST"
+description            = "Don't panic"
+email                  = "inomar1486@gmail.com"
+extracssfiles          = [ "/css/override.css" ]       # In your `static` directory, add/remove files as necessary.
+
+github                 = "//github.com/inomar"
+highlightjs            = true
+noshowreadtime         = false                         # if true, don't show "<x> minutes read" in posts
+selfintro              = ""                            # appears in the site header when set to a non-empty string
+twitter                = "//twitter.com/macoto_chan"
+highlightjslanguages   = ["bash","ruby"]                        # additional languages not included in the "common" set
+highlightjsStyle       = "obsidian"
