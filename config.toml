@@ -8,7 +8,6 @@ builddrafts             = false
 canonifyurls            = true
 contentdir              = "content"
 layoutdir               = "layouts"
-publishdir              = "public"
 author                  = "inomar"
 pygmentsuseclasses      = true
 pluralizelisttitles     = false
